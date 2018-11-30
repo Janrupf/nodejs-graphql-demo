@@ -1,0 +1,21 @@
+type Query {
+    person(name: String!): Person
+}
+
+type Mutation {
+    addPerson(person: PersonInput!): Person
+}
+
+type Person {
+    name: String!
+    age: Int!
+    friends: [Person]!
+    extra: String
+}
+
+input PersonInput {
+    name: String!
+    age: Int!
+    friends: [String]
+    extra: String
+}
